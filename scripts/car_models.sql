@@ -9,4 +9,9 @@ CREATE TABLE IF NOT EXISTS car_models
  model_title character varying(125) NOT NULL,
  year integer NOT NULL,
  PRIMARY KEY (id)
-)
+);
+
+ CREATE INDEX make_code_index ON car_models (make_code);
+CREATE INDEX year_index ON car_models (year);
+CREATE INDEX model_code_index ON car_models (model_code);
+CREATE INDEX make_and_model_code_index ON car_models (make_code, model_code);
